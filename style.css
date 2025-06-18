@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
    background-image: 
   linear-gradient(to right, #01022de5 50%,#0000007a),
-  url(picture/backgrond.jpg.jpg);
+  url(backgrond.jpg.jpg);
   background-repeat: no-repeat;
    background-size: cover;
   background-position: center;
