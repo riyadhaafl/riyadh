@@ -1,0 +1,204 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  display: flex;
+  min-height: 100vh;
+   background-image: 
+  linear-gradient(to right, #01022de5 50%,#0000007a),
+  url(picture/backgrond.jpg.jpg);
+  background-repeat: no-repeat;
+   background-size: cover;
+  background-position: center;
+}
+
+
+.sidebar {
+  width: 225px;
+  background-color: rgba(255, 255, 255, 0.05); /* خلفية شفافة ناعمة */
+  padding: 30px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(5px); /* تأثير الضبابية */
+  -webkit-backdrop-filter: blur(5px); /* دعم Safari */
+  border-left: 1px solid rgba(255, 255, 255, 0.1); /* خط فاصل ناعم اختياري */
+}
+
+
+/**
+.sidebar {
+  width: 220px;
+  background-color: rgba(58, 53, 53, 0);
+  padding: 30px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}**/
+/**
+.content,.sidebar {
+  background-repeat: no-repeat;
+   background-size: cover;
+  background-position: center;
+  background-image: 
+  linear-gradient(to right, #01022de5 20%,#0000007a),
+  url(picture/backgrond.jpg.jpg)
+  ;
+  
+}**/
+/**
+.body:hover{ 
+   background-image: 
+  linear-gradient(to right, #01022de5 50%, transparent),
+  url(picture/backgrond.jpg.jpg)
+  
+  ;
+ 
+}**/
+  /**
+.sidebar:hover{ 
+   background-image: 
+  linear-gradient(to right, #01022de5 20%, transparent),
+  url(picture/backgrond.jpg.jpg)
+  
+  ;
+
+}**/
+.sidebar h2 {
+   padding: 2vw; 
+  font-size: 22px;
+  margin-bottom: 1px;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.sidebar h2:hover {
+  animation: shake 0.4s;
+  color: #b8860b;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+}
+
+
+
+.sidebar a {
+  width: 200px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #d4af37;
+}
+
+
+.content {
+  margin-right: 240px;
+  padding: 60px 30px;
+  width: 100%;
+  color: white;
+}
+
+
+section {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+section h2 {
+  font-size: 26px;
+  color: #ffd700;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 5px;
+}
+
+section h3 {
+  color: #f0e68c;
+  margin: 10px 0 5px;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.golden-button {
+  background-color: #d4af37;
+  color: white;
+  padding: 12px 28px;
+  margin: 6px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.golden-button:hover {
+  background-color: #bfa034;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #444;
+  }
+
+  .content {
+    margin-right: 0;
+    padding: 20px;
+  }
+}
+
+
+.profile-image-container {
+  display: flex;
+  position: absolute; /* أو relative أو fixed حسب ما تريد */
+  top: 65px;        /* المسافة من الأعلى */
+  left: 150px;       /* المسافة من اليمين */
+  justify-content: right;
+  margin-bottom: 50px;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #d4af37;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #d4af37;
+}
